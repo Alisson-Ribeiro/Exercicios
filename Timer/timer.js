@@ -31,12 +31,15 @@ function stop(){
 function watch(){
     sec++
     if(sec == 60){
-        min++
-        sec=0
-        if(min == 60){
-            hr++
-            min=0
-        }
-    }
+    min++
+    sec=0
+        
+    if(min == 60){
+    hr++
+    min=0}
+    
+    if(hr == 24){
+    hr = 0}}
+    
     document.getElementById('watch').innerText=TwoDigits(hr)+':'+TwoDigits(min)+':'+TwoDigits(sec)
 }
