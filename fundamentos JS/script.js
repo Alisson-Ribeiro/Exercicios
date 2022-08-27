@@ -191,3 +191,54 @@ const lista2 = ['a','b','c','d','e']
 for (let counter = 0; counter < lista2.length; counter++) {
     console.log(`listando: ${lista2[counter]}`) // template literals
 }
+
+// metodos de array -> repetição
+
+// for each
+
+const names = ['alisson', 'emilia', 'patricia', 'evaldo']
+
+names.forEach(function(name) {
+    console.log(`O nome é : ${name}`)
+})
+
+// map
+
+const names2 = names.map(function(name) {
+    if(name === 'alisson') {
+        return (name = 'Sr. alisson')
+    } else {
+        return name
+    }
+})
+
+console.log(names2)
+
+// filter
+
+const numbers = [1,2,3,4,5,10,100].filter(function(number) {
+    return number >= 5
+})
+
+console.log(numbers)
+
+
+//reduce
+
+const soma = [10,20,30,40,50].reduce(function(total, number) {
+    return total + number
+})
+
+console.log(soma)
+
+// arrow functions
+
+const arrowfunction = (a, b) => {
+    return a + b
+}
+
+console.log(arrowfunction(5,5))
+
+const simplearrowfunction = (a, b) => a + b
+
+console.log(simplearrowfunction(10, 10))
