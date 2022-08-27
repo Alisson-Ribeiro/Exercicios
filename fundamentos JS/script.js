@@ -88,3 +88,106 @@ console.log(list)
 list.pop()
 
 console.log(list)
+
+list.pop()
+
+console.log(list)
+
+list.shift()
+
+console.log(list)
+
+list.unshift('a')
+
+console.log(list)
+
+
+// objetos
+
+const product = {
+    name: 'camisa',
+    price: 15.99,
+    instock: true,
+    sizes: ['p','m','g'],
+    'main color' : 'azul',
+}
+
+console.log(product.name)
+console.log(product['name'])
+console.log(product['main color'])
+
+// destructuring
+
+const {price, instock} = product
+
+console.log(price)
+console.log(instock)
+
+const[n1,n2] = list
+
+console.log(n1)
+console.log(n2)
+
+// JSON - javascript object notation
+
+const dog = {
+    name: 'shark',
+    age: 10
+}
+
+const json = JSON.stringify(dog)
+
+console.log(json)
+
+const obj = JSON.parse(json)
+
+console.log(obj)
+
+const jsonerrado = '{"name": "teste","surname":"testando"}'
+
+const obj2 = JSON.parse(jsonerrado)
+
+console.log(obj2)
+
+// estruturas condicionais
+
+const a = 10
+
+if(a>8) {
+    console.log('A é maior que 8')
+}
+
+const b = 'alisson'
+
+if(b === 'ribeiro') {
+    console.log('o nome é ribeiro')
+} else if(b === 'vieira') {
+    console.log('o nome é vieira')
+} else {
+    console.log('nome nao encontrado')
+}
+
+const numero = 100
+
+// if ternario
+
+let testando = numero<20 ? 'sim' : 'nao'
+
+console.log(testando)
+
+// estruturas de repetição
+
+const lista = [1,2,3,4,5]
+
+let counter = 0
+
+while(counter < lista.length) {
+    console.log('listando: ' + lista[counter])
+    counter++
+}
+
+const lista2 = ['a','b','c','d','e']
+
+for (let counter = 0; counter < lista2.length; counter++) {
+    console.log(`listando: ${lista2[counter]}`) // template literals
+}
