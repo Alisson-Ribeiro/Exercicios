@@ -242,3 +242,74 @@ console.log(arrowfunction(5,5))
 const simplearrowfunction = (a, b) => a + b
 
 console.log(simplearrowfunction(10, 10))
+
+// classes
+
+class Product {
+    constructor(name, price) {
+        this.name = name
+        this.price = price
+    }
+
+    productDetails() {
+        return `O nome do produto é ${this.name} e o preço é R$${this.price}`
+    }
+}
+
+const socks = new Product('meia branca', 10.99)
+const shirt = new Product('camisa preta', 22.99)
+
+console.log(socks.name)
+console.log(socks.price)
+console.log(shirt.name)
+console.log(shirt.productDetails())
+
+// herança
+
+class SuperProduct extends Product {
+    constructor(name, price, size) {
+        super(name, price)
+        this.size = size
+    }
+
+    showAdjective(adjective) {
+        return `o ${this.name} é muito ${adjective}`
+    }
+
+    // static
+    static sayhello(){
+        console.log('Hello')
+    }
+}
+
+const tenis = new SuperProduct('Tênis vermelho', 59.9, '42')
+
+console.log(tenis.name)
+console.log(tenis.size)
+
+console.log(tenis.showAdjective('Bom'))
+
+SuperProduct.sayhello()
+
+// DOM - document object model
+// seleçao de elementos
+
+const title = document.getElementById("title")
+
+console.log(title)
+
+// query selector
+
+const sametitle = document.querySelector('#title')
+
+console.log(sametitle)
+
+const texts = document.querySelectorAll('.text')
+
+console.log(texts)
+
+console.log(texts[1])
+
+texts.forEach((text) => {
+    console.log(text.textContent.toUpperCase())
+})
