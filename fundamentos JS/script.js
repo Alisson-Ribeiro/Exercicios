@@ -313,3 +313,20 @@ console.log(texts[1])
 texts.forEach((text) => {
     console.log(text.textContent.toUpperCase())
 })
+
+// manipulação de elementos
+
+title.textContent = 'mudei o texto'
+
+texts[0].innerHTML = '<span>Alteramos o HTML deste elemento</span>'
+texts[1].style.backgroundColor = 'red'
+texts[2].classList.add('my-class')
+texts[2].classList.remove('text')
+texts[3].remove()
+
+// eventos
+const btn = document.querySelector('#btn')
+
+btn.addEventListener('click', function() {
+    texts[2].style.color = 'blue'
+})
