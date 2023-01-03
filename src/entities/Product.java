@@ -18,4 +18,14 @@ public class Product {
 		this.quantity -= quantity;
 	}
 	
+	public String toString() { // sobrescrevendo método nativo do toString para um retorno formatado
+		return name
+			+ ", $"
+			+ String.format("%.2f", price ) // retorno do atributo preco formatado para 2 casas decimais
+			+ ", "
+			+ quantity
+			+ " units, Total: $ "
+			+ String.format("%.2f", totalValueInStock()); // retorno do método totalValueInStock formatado para 2 casas decimais
+	}
+	
 }
