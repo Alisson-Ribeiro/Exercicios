@@ -24,7 +24,7 @@ public class Program {
 		product.quantity = sc.nextInt();
 		
 		
-		
+		System.out.println(product);
 		
 		
 		
